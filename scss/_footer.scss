@@ -1,0 +1,26 @@
+.footer {
+  display: flex;
+  height: 50vh;
+  &-contacts {
+    flex-basis: 50%;
+    background: #303f9f;
+    padding: 75px 45px 75px 70px;
+  }
+  &-map {
+    flex-basis: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #795548;
+  }
+  &-content {
+    &__item {
+      display: block;
+      color: gray;
+      @include hover;
+      text-decoration: none;
+      font-size: 25px;
+      margin-bottom: 15px;
+    }
+  }
+}

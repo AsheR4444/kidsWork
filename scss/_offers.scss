@@ -1,0 +1,53 @@
+.offers {
+  display: flex;
+  flex-wrap: wrap;
+  &-item {
+    flex-basis: 33%;
+    background: url(../img/ferrafi.jpg) no-repeat;
+    background-size: cover;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding-bottom: 30px;
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+    &:before {
+      content: '';
+      position: absolute;
+      background-color: #142729;
+      opacity: 0.47;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 5;
+    }
+    &__content {
+      z-index: 10;
+    }
+    &__title {
+      font-size: 25px;
+      margin-bottom: 2px;
+    }
+    &__rate,
+    &__price {
+      font-size: 20px;
+      color: gray;
+    }
+    &__rate {
+      margin-bottom: 5px;
+      span {
+        text-decoration: line-through;
+        color: $col-or;
+      }
+    }
+    &__price {
+      span {
+        color: #fff;
+      }
+    }
+  }
+}

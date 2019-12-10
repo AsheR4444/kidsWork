@@ -1,0 +1,44 @@
+// == mixins ==
+@mixin bold {
+  font-weight: bold;
+}
+@mixin upper {
+  text-transform: uppercase;
+}
+@mixin underline {
+  text-decoration: underline;
+}
+@mixin hover {
+  transition: 0.5s;
+  &:hover {
+    color: orangered;
+  }
+}
+// == /mixins ==
+// == variablse ==
+$col-or: orangered;
+// == /variablse ==
+// == main ==
+body {
+  font-family: 'Roboto', sans-serif;
+  color: #fff;
+}
+.section-title {
+  @include upper;
+  @include bold;
+  @include underline;
+  font-size: 50px;
+  margin-bottom: 40px;
+}
+.section-subtitle {
+  font-size: 35px;
+  margin-bottom: 30px;
+}
+// == /main ==
+@import 'normalize.scss';
+@import '_grid.scss';
+@import '_header.scss';
+@import '_welcome.scss';
+@import '_about.scss';
+@import '_offers.scss';
+@import '_footer.scss';
